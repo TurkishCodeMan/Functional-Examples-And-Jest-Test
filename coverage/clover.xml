@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1625400286101" clover="3.2.0">
-  <project timestamp="1625400286102" name="All files">
-    <metrics statements="11" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="5" elements="20" coveredelements="15" complexity="0" loc="11" ncloc="11" packages="2" files="2" classes="2"/>
+<coverage generated="1625419088125" clover="3.2.0">
+  <project timestamp="1625419088126" name="All files">
+    <metrics statements="40" coveredstatements="31" conditionals="2" coveredconditionals="1" methods="19" coveredmethods="11" elements="61" coveredelements="43" complexity="0" loc="40" ncloc="40" packages="2" files="3" classes="3"/>
     <package name="composition">
-      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <metrics statements="33" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="8"/>
       <file name="composition.js" path="E:\Javascript\JS-Hard-PartsV2\Brian_Functional\src\composition\composition.js">
-        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
+        <metrics statements="16" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+      </file>
+      <file name="composition_exercise.js" path="E:\Javascript\JS-Hard-PartsV2\Brian_Functional\src\composition\composition_exercise.js">
+        <metrics statements="17" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
       </file>
     </package>
     <package name="curry">

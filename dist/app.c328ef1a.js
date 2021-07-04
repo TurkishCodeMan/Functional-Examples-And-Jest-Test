@@ -17062,7 +17062,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.composed = void 0;
+exports.doStuff = exports.pipeShout = exports.shout = exports.composed = void 0;
 
 var _ramda = require("ramda");
 
@@ -17074,12 +17074,35 @@ function exclaim(str) {
   return str + "!";
 }
 
-function first(arr) {
-  return arr[0];
+function first(str) {
+  return str[0];
 }
 
-var composed = (0, _ramda.compose)(exclaim, toUpper);
+var concat = (0, _ramda.curry)(function add(y, x) {
+  return x + y;
+});
+var log = (0, _ramda.curry)(function logger(tag, x) {
+  return console.log(tag, x), x;
+});
+var composed = (0, _ramda.compose)(concat("!"), log("here :"), toUpper);
 exports.composed = composed;
+var shout = (0, _ramda.compose)(first, (0, _ramda.compose)(first, toUpper));
+exports.shout = shout;
+var pipeShout = (0, _ramda.pipe)((0, _ramda.compose)(toUpper, first), first);
+exports.pipeShout = pipeShout;
+var doStuff = (0, _ramda.compose)((0, _ramda.join)(" "), (0, _ramda.filter)(function (x) {
+  return x.length > 3;
+}), _ramda.reverse, (0, _ramda.map)(_ramda.trim), (0, _ramda.split)(" "), log("AfterLower :"), _ramda.toLower); //Aynı şey aslında compose nokta zincirlemedir.Sağdan Sola
+
+exports.doStuff = doStuff;
+
+var doStuff2 = function doStuff2(str) {
+  return str.toLowerCase().split(" ").map(function (c) {
+    return c.trim();
+  }).reverse().filter(function (x) {
+    return x.length > 3;
+  }).join(" ");
+};
 },{"ramda":"node_modules/ramda/es/index.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
@@ -17088,6 +17111,8 @@ var _composition = require("./src/composition/composition.js");
 function init() {
   var composedResult = (0, _composition.composed)("hüseyin");
   console.log(composedResult);
+  var doStuffRes = (0, _composition.doStuff)("Deneme artık yeter");
+  console.log(doStuffRes);
 }
 
 init();
@@ -17119,7 +17144,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60237" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62003" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
