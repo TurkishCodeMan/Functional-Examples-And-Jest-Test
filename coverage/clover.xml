@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1625419088125" clover="3.2.0">
-  <project timestamp="1625419088126" name="All files">
-    <metrics statements="40" coveredstatements="31" conditionals="2" coveredconditionals="1" methods="19" coveredmethods="11" elements="61" coveredelements="43" complexity="0" loc="40" ncloc="40" packages="2" files="3" classes="3"/>
+<coverage generated="1625424492740" clover="3.2.0">
+  <project timestamp="1625424492740" name="All files">
+    <metrics statements="61" coveredstatements="49" conditionals="2" coveredconditionals="1" methods="38" coveredmethods="29" elements="101" coveredelements="79" complexity="0" loc="61" ncloc="61" packages="3" files="4" classes="4"/>
     <package name="composition">
       <metrics statements="33" coveredstatements="25" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="8"/>
       <file name="composition.js" path="E:\Javascript\JS-Hard-PartsV2\Brian_Functional\src\composition\composition.js">
@@ -55,6 +55,33 @@
         <line num="16" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="functor">
+      <metrics statements="21" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="18"/>
+      <file name="funtor_exercise.js" path="E:\Javascript\JS-Hard-PartsV2\Brian_Functional\src\functor\funtor_exercise.js">
+        <metrics statements="21" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="18"/>
+        <line num="2" count="20" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
       </file>
     </package>
   </project>

@@ -17103,20 +17103,76 @@ var doStuff2 = function doStuff2(str) {
     return x.length > 3;
   }).join(" ");
 };
+},{"ramda":"node_modules/ramda/es/index.js"}],"src/functor/functor.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.result2 = exports.result = void 0;
+
+var _ramda = require("ramda");
+
+function Box(x) {
+  return {
+    map: function mapper(f) {
+      return Box(f(x));
+    },
+    toString: "Box".concat(x),
+    fold: function folder(f) {
+      return f(x);
+    }
+  };
+}
+
+function first(xs) {
+  return xs[0];
+}
+
+function nextCharForNumberString(str) {
+  return Box(str).map(function (x) {
+    return x.trim();
+  }).map(function (x) {
+    return parseFloat(x, 10);
+  }).map(function (number) {
+    return new Number(number + 1);
+  }).fold(String.fromCharCode);
+}
+
+function halfTheFirstLargeNumber(arr) {
+  return Box(arr).map(function (v) {
+    return v.filter(function (x) {
+      return x >= 20;
+    });
+  }).map(function (found) {
+    return first(found) / 2;
+  }).fold(function (answer) {
+    return "The Answer is ".concat(answer);
+  });
+}
+
+var result = nextCharForNumberString('  64');
+exports.result = result;
+var result2 = halfTheFirstLargeNumber([1, 4, 50]);
+exports.result2 = result2;
 },{"ramda":"node_modules/ramda/es/index.js"}],"app.js":[function(require,module,exports) {
 "use strict";
 
 var _composition = require("./src/composition/composition.js");
 
+var _functor = require("./src/functor/functor");
+
 function init() {
-  var composedResult = (0, _composition.composed)("hüseyin");
-  console.log(composedResult);
-  var doStuffRes = (0, _composition.doStuff)("Deneme artık yeter");
-  console.log(doStuffRes);
+  // var composedResult=composed("hüseyin");
+  // console.log(composedResult);
+  // var doStuffRes=doStuff("Deneme artık yeter");
+  // console.log(doStuffRes)
+  console.log(_functor.result);
+  console.log(_functor.result2);
 }
 
 init();
-},{"./src/composition/composition.js":"src/composition/composition.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./src/composition/composition.js":"src/composition/composition.js","./src/functor/functor":"src/functor/functor.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -17144,7 +17200,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60128" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
