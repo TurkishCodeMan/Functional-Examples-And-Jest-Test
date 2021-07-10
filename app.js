@@ -1,5 +1,8 @@
-import { composed, doStuff } from "./src/composition/composition.js"
-import {result,result2} from "./src/functor/functor";
+//import { composed, doStuff } from "./src/composition/composition.js"
+//import { Box } from "./src/monads/task_monad"
+//import { app } from "./src/monads/either_monad_exercise"
+// import {exercise} from "./src/monad_pattern/exercise"
+import { app } from "./src/weather/weather";
 function init() {
     // var composedResult=composed("hüseyin");
     // console.log(composedResult);
@@ -7,7 +10,11 @@ function init() {
     // var doStuffRes=doStuff("Deneme artık yeter");
     // console.log(doStuffRes)
 
-    console.log(result);
-    console.log(result2);
+    // var res=Box(()=>2).map(two=>two+1).fold();
+    // console.log(res)
+
+    //app().fork(console.error,()=>console.log("success"))
+
+    app();
 }
 init();
